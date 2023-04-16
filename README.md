@@ -2,6 +2,6 @@
 Blockchain based news-forum system.This is the repository for the project in the course cs731.
 ## Instruction to run
 1. Download the project from this repository
-2. Install Truffle and Ganache
+2. Install NodeJS and truffle
 3. Download Ganache 
 4. 
