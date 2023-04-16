@@ -1,5 +1,5 @@
 # NewsForum
-Blockchain based news-forum system.This is the repository for the project in the course cs731.
+Blockchain based news-forum system.This is the repository for the project in the course cs731 of Group 15 Contributed by Vasavi Bashaboyna, Himanshu PS, Vyjayanthi Reddy.
 ## Instruction to run
 1. Download the project from this repository
 2. Install NodeJS and truffle
