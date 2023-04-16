@@ -3,3 +3,5 @@ Blockchain based news-forum system.This is the repository for the project in the
 ## Instruction to run
 1. Download the project from this repository
 2. Install Truffle and Ganache
+3. Download Ganache 
+4. 
