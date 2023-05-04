@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">NewsForum</a>
+        </div>
+
+        <% if( login === false ){ %>
+        <div class="buttons-div" id="LoginDiv" >
+            <button class="btn btn-info" onclick="location.href='/Login'">Login</button>
+            <button  class="btn btn-info" onclick="location.href='/Signup'" >Signup</button>
+        </div>  
+        <% }  %>
+        
+        <% if (login === true ){ %>
+
+            
+        <div  id="userDiv" >
+
+            <% if(user.is_validator){ %>
+                <form action="/ToValidate" type="post" style="position: absolute; right: 40%; top: 10px; ">
+                    <button id="vButton" class="btn btn-info">validate Articles</button>
+                </form>
+            <% } %>
+
+            <form action="/writeArticle" method="post" style="position: absolute; right: 20%; top: 10px; ">
+                <button name= "userId" class="btn btn-info" type="submit" value="<%= user %>"  >+ new article</button>
+            </form>
+              
+            <form action="/user-profile/<%= user.username %>" method="get"  style="position: absolute; right: 10%; top: 10px;" >
+                <button  class="btn btn-info" type="submit" ><span class="glyphicon glyphicon-user" aria-hidden="true"></span></button>
+            </form>
+            
+            
+            
+        </div>
+        
+        <% } %>
+
+        
+        
+    </div>
+    
+</nav>

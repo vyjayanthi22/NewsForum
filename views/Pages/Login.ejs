@@ -1,0 +1,17 @@
+<%- include("../partials/header") %>
+
+    <form id="LoginForm"  method="post" action="/LoginRequest">
+        
+        <div class="form-outline" >
+            <input type="text" class="form-control" type="text" id="username"  placeholder="user name" name="username"  >
+        </div>
+        
+        <div class="form-outline">
+            <input class="form-control" type="password" id="password"  placeholder="password" name="password">
+        </div>
+        
+        <button type="button" class="btn btn-large" style="width : 30%; " name="type" value="login" id="LoginButton">Log in</button>
+
+    </form>
+
+<%- include("../partials/footer") %>

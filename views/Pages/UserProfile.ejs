@@ -1,0 +1,13 @@
+
+        <h1 class="text-center">Profile Page</h1>
+        <hr>
+        <div>
+        <p>User name -  <%= user.username %></p>
+        <p>user email - <%= user.email %></p>
+        <p>Rewards -  <%= user.rewards %></p>
+        <p>no of your articles published - <%= user.num_validated_articles %> </p>
+        <div>
+
+        <%- include('../components/forum', {articles:  mysubarticles}) %>
+
+  <a href="#" class="btn btn-primary">Edit Profile</a>

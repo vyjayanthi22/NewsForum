@@ -1,0 +1,49 @@
+<div class="container">
+    <!-- <input type="hidden"  id="articles" value="<%= articles %>"> -->
+    <% articles.forEach((article,key)=>{ %> 
+    <div class="panel panel-default">
+        <div class="panel-body">
+        <h3><%= article.title %></h3>
+        <p><%= article.content %></p>
+        </div>
+        <div class="panel-footer"> <span >
+
+            <button>
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+            </button>
+            <button onclick="_upvoteArticle('<%=article.aid%>')">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                <%= article.upvoters.length %> 
+            </button>
+            <button >
+                <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            </button>
+            <a href="/"><%=article.author%></a>
+            
+
+        </span>
+
+        
+        <% var date = new Date(article.last_modified_time * 1000);%>
+        <% var year = date.getFullYear(); %>
+        <% var month = String(date.getMonth() + 1).padStart(2, '0'); %>
+        <% var day = String(date.getDate()).padStart(2, '0'); %>
+        <% var hours = String(date.getHours()).padStart(2, '0'); %>
+        <% var minutes = String(date.getMinutes()).padStart(2, '0'); %>
+        <% var seconds = String(date.getSeconds()).padStart(2, '0'); %>
+        <% var dateString = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`; %>
+        <%= dateString %>
+
+
+
+        <% if(!article.is_validated){ %>
+            <button onclick="_validateArticle('<%=article.aid%>')">validate</button>
+        <%} %>
+    </div>
+    </div>
+    <% }) %>
+    
+
+</div>
+
+
